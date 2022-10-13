@@ -1,0 +1,86 @@
+<!DOCTYPE html>     <!-- กำหนดชนิดของไฟล์และเวอร์ชั่นของhtml-->
+<html lang="en">    <!-- กำหนดภาษาให้เป็น english-->
+<head>
+        <!--โครงสร้างพื้นฐาน-->
+        <meta charset="UTF-8">  <!-- กำภาษาพื้นฐาน-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--กำหนดเพื่อไว้ทำ responsive-->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Midturm Panadon Sangrungrats</title>  <!--กำหนดชื่อหัวเว็ป-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="styleMid.css">   <!--ลิงค์ไฟล์ style.css-->
+</head>    
+<script src="dataMid.js"> </script>    <!--ลิงค์ข้อมูลdata ชื่อ test1.js-->
+<body background="background.jpg">
+<h1 > Parameter </h1>
+<div class="Container">
+    <div class="Container1">
+            <!--สำหรับรับค่า-->
+        <div class="backdataget">    
+            <div class="dataget">
+                <form>                           
+                    <legend>Data Get</legend>
+                    <label >Sensor :&nbsp;</label>
+                    <input autofocus id="transducer" placeholder="Transducer..." type="text" list="datatransducer">
+                    <datalist id="datatransducer">
+                        <option value="Flow">
+                        <option value="Level">
+                        <option value="Temperature">
+                        <option value="Pressure"> 
+                    </datalist>
+                    <label>Number :&nbsp;</label>
+                    <input id="number" placeholder="Number..." type="text" list="datanumber">
+                    <datalist id="datanumber">
+                        <option value="0">
+                        <option value="1">
+                        <option value="2">
+                    </datalist>
+                    <input type = "submit" value="Send">
+                    <legend>Data Show</legend>
+                </form >
+                <div class="A">
+                    <ol id="r1_1"></ol>
+                    <ol id="r1_2"></ol>
+                    <ol id="r1_3"></ol>
+                    <ol id="r1_4"></ol>
+                </div>
+            </div>
+        </div>
+            <!--คนจัดทำ-->
+        <div class="organizer"> 
+            <h2 >Organizer</h2>
+                <div class ="img">
+                    <img src="pump.jpg" class="img-fluid rounded-circle mb-3" >  <!--calss เป็นการใช้บลูสแต็ปทำให้รูปเป็นวงกลม-->
+                </div>
+                <div class ="profile">
+                    <h5>Panadon Sangrungrat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Pump)</h5>
+                    <p>ID : 6301072516116 <br> branch : InSE</p>
+                </div>
+        </div>
+    </div>
+    <div class="Container2">
+            <!--สำหรับส่งค่า-->
+        <div class="datapost">
+            <form method="POST" action="https://midterm-exam-010723313-2022.herokuapp.com/student_post">              <!--กำหนด method POST และ action คือ ผูกกับ Link ที่จะส่งข้อมูลไป-->              
+                <legend>Data Post</legend>
+                <label>Study_ID &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input autofocus name="st_id" placeholder="Enter Your Study_Id..." type="text" ><br><br>
+                <label>Study_Name &nbsp; : &nbsp;</label>
+                <input name="st_name" placeholder="Enter Your Study_Name..." type="text" ><br><br>
+                <label>Sensor_Name  : &nbsp;</label>
+                <input name="sensor_name" placeholder="Sensor_Name..." type="text" ><br><br>
+                <label>Sensor_Type &nbsp; : &nbsp;</label>
+                <input name="sensor_type" placeholder="Type..." type="text" ><br><br>
+                <label>Sensor_Value  &nbsp;: &nbsp;</label>
+                <input name="sensor_value" placeholder="Value..." type="text" ><br><br>
+                <label>Sensor_Unit &nbsp;&nbsp; : &nbsp;</label>
+                <input name="sensor_unit" placeholder="Unit..." type="text" ><br><br>
+                <input type = "submit" value="Send">
+            </form >
+        </div>
+        <div class="emoji"> &#128736; &#128736; &#128736;</div>  <!-- ดึง emoji จาก w3school-->
+    </div>
+</div>
+</body>
+</html
+
